@@ -12,6 +12,10 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
-    "astro": "^2.0.2"
-  }
+    "astro": "^2.0.2",
+    "astro-compress": "^1.1.28",
+    "astro-robots-txt": "^0.3.11",
+    "astro-seo-metadata": "^0.5.5"
+  },
+  "devDependencies": {}
 }

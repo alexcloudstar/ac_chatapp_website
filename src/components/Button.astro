@@ -6,7 +6,10 @@ export interface Props {
 const { isPrimary = false } = Astro.props as Props;
 ---
 
-<button type='button' class={`${isPrimary ? 'primary' : 'secondary'}`}>
+<button
+  type='button'
+  class={`${isPrimary ? 'primary' : 'secondary'} animate__backInLeft`}
+>
   <a href='https://chatapp.alexcloudstar.com/'> Try it free</a>
 </button>
 
