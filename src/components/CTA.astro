@@ -1,0 +1,52 @@
+---
+import Body from '../layouts/Body.astro';
+import image from '../assets/images/perfect_solution.png';
+import Button from './Button.astro';
+---
+
+<Body>
+  <div class='cta'>
+    <div class='cta--left'>
+      <img src={image} alt='ChatApp perfect solution' />
+    </div>
+    <div class='cta--right'>
+      <h2>Perfect Solution for Casual Chatting</h2>
+      <Button isPrimary />
+      <div class='underline'></div>
+    </div>
+  </div>
+</Body>
+
+<style>
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cta--left img {
+    max-width: 650px;
+  }
+
+  .cta--right {
+    max-width: 500px;
+    margin-right: 10rem;
+  }
+
+  .cta--right h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--colorTertiary);
+    letter-spacing: 3.5px;
+    margin-bottom: 3rem;
+    font-family: var(--fontPrimary);
+  }
+
+  .underline {
+    width: 40%;
+    height: 1px;
+    background-color: var(--colorTertiary);
+    margin-top: 5rem;
+  }
+</style>

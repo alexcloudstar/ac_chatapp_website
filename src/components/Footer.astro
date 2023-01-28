@@ -1,0 +1,48 @@
+---
+import Logo from './Logo.astro';
+---
+
+<footer>
+  <div class='container'>
+    <div class='contact'>
+      <Logo />
+      <div>
+        <h5>Contact</h5>
+        <a href='mailto:alexcloudstar@gmail.com'
+          >email @ alexcloudstar@gmail.com</a
+        >
+      </div>
+    </div>
+    <div class='copyright'>
+      <span>© Alex Cloudstar 2022 - {new Date().getFullYear()}</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 50px;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: centerr;
+  }
+
+  .contact h5 {
+    font-family: var(--fontSecondary);
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .contact a {
+    color: #fff;
+  }
+
+  .copyright {
+    margin-top: 1.5rem;
+  }
+</style>

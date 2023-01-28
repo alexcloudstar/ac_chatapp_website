@@ -1,0 +1,50 @@
+---
+import Body from '../layouts/Body.astro';
+import image from '../assets/images/introduction.png';
+---
+
+<Body>
+  <div>
+    <h3>Instant group Chats</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculua mus. Donec quam felis, ultricies
+      nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+    </p>
+    <img src={image} alt='ChatApp Demo' />
+  </div>
+</Body>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px 50px;
+  }
+
+  h3 {
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--colorPrimary);
+    font-family: var(--fontPrimary);
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--colorTertiary);
+    font-family: var(-fontSecondary);
+    max-width: 625px;
+    padding: 25px 0 50px 0;
+  }
+
+  img {
+    max-width: 990px;
+  }
+
+  img::after {
+  }
+</style>

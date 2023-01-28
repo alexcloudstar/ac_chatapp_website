@@ -1,0 +1,60 @@
+---
+import Body from '../layouts/Body.astro';
+import Logo from './Logo.astro';
+---
+
+<Body>
+  <header>
+    <div>
+      <Logo />
+      <ul>
+        <li>
+          <a href='/'>Home</a>
+          <a href='https://chatapp.alexcloudstar.com/'>Login</a>
+          <a href='https://chatapp.alexcloudstar.com/'>Register</a>
+          <a href='https://chatapp.alexcloudstar.com/'>Try for free</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</Body>
+
+<style>
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--colorPrimary);
+    padding: 1.5rem 0;
+  }
+
+  header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0.8rem;
+    box-shadow: inset 0 0 0 0 var(--colorSecondary);
+    padding: 0 0.25rem;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+
+  ul li a:hover {
+    box-shadow: inset 150px 0 0 0 var(--colorSecondary);
+    color: white;
+  }
+</style>

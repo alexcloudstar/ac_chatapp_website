@@ -1,0 +1,68 @@
+---
+import hero from '../assets/images/hero.png';
+import Button from './Button.astro';
+---
+
+<div class='hero'>
+  <div class='hero--left'>
+    <h2>Have your best chat</h2>
+    <h3>Fast, easy & unlimited conference call services</h3>
+
+    <Button />
+  </div>
+  <div class='hero--right'>
+    <img src={hero} alt='Try ChatApp' />
+  </div>
+</div>
+
+<style>
+  .hero {
+    background-color: var(--colorPrimary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 6rem;
+  }
+
+  .hero--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1.5rem;
+  }
+
+  h2,
+  h3 {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 5rem;
+    font-weight: 600;
+    white-space: break-spaces;
+    letter-spacing: 0.2rem;
+    max-width: 90%;
+    font-family: var(--fontPrimary);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-family: var(--fontSecondary);
+  }
+
+  .hero--right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+
+  .hero--right img {
+    width: 100%;
+    max-width: 37.5rem;
+  }
+</style>

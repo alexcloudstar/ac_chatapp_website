@@ -1,0 +1,46 @@
+---
+export interface Props {
+  isPrimary?: boolean;
+}
+
+const { isPrimary = false } = Astro.props as Props;
+---
+
+<button type='button' class={`${isPrimary ? 'primary' : 'secondary'}`}>
+  <a href='https://chatapp.alexcloudstar.com/'> Try it free</a>
+</button>
+
+<style>
+  button {
+    width: max-content;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    border: 1px solid #fff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: var(--fontSecondary);
+    cursor: pointer;
+    transition: all 0.45s ease;
+  }
+
+  .primary {
+    background-color: var(--colorSecondary);
+    color: #fff;
+  }
+
+  .primary:hover {
+    background-color: #fff;
+    color: var(--colorSecondary);
+    border: 1px solid var(--colorSecondary);
+  }
+
+  .secondary {
+    background-color: #fff;
+    color: var(--colorSecondary);
+  }
+
+  .secondary:hover {
+    background-color: var(--colorSecondary);
+    color: #fff;
+  }
+</style>

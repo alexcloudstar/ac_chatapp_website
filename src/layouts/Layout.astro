@@ -1,0 +1,62 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+export interface Props {
+  title?: string;
+}
+
+const { title = 'Chatapp' } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap'
+      rel='stylesheet'
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header/>
+    <main>
+      <slot />
+    </main>
+    <Footer/>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --colorPrimary: #596787;
+    --colorSecondary: rgb(59 130 246 / 1);
+    --colorTertiary: #3B454D;
+    --fontPrimary: 'Poppins', sans-serif;
+    --fontSecondary: 'Roboto', sans-serif;
+  }
+
+
+  *,html,body {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--fontPrimary)
+    background-color: #f6f6f6;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    background: inherit;
+  }
+</style>
