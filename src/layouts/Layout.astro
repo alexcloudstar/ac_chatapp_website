@@ -23,6 +23,8 @@ const { title = 'Chatapp' } = Astro.props as Props;
       href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap'
       rel='stylesheet'
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <SEOMetadata
     siteName={'AC ChatApp'}
     description={'Introducing ChatApp V2: The Next Generation of Chatting ChatApp V2 is the upgraded version of KSChat, a chat application that offers a variety of features for users to enjoy. With ChatApp V2, users can easily create an account, log in and out, view their own and other users profiles.'}
@@ -77,3 +79,8 @@ const { title = 'Chatapp' } = Astro.props as Props;
     background: inherit;
   }
 </style>
+
+<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js" />
+  <script is:inline>
+    AOS.init();
+  </script>
