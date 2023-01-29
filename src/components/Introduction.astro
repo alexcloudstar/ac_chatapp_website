@@ -5,10 +5,21 @@ import introduction from '../assets/images/introduction.png';
 import punishment from '../assets/images/punishment.png';
 import awesome from '../assets/images/awesome.png';
 import create from '../assets/images/create.png';
+
+const benefits = await Astro.glob('../benefits/*.md');
 ---
 
 <Body>
-  <Card
+  {
+    benefits.map(benefit => (
+      <Card
+        title={benefit.frontmatter.title}
+        description={benefit.frontmatter.description}
+        image={benefit.frontmatter.image}
+      />
+    ))
+  }
+  <!-- <Card
     title='Instant group Chats'
     description='Introducing ChatApp V2: The Next Generation of Chatting ChatApp V2 is the upgraded version of KSChat, a chat application that offers a variety of features for users to enjoy. With ChatApp V2, users can easily create an account, log in and out, view their own and other users profiles, customize their own profiles, and create new chat rooms with customizations such as room name, profanity words, invited users, and room avatar. One of the key features of ChatApp V2 is the ability to customize chat rooms. Users can create new rooms with a custom room name and set profanity words that will automatically be replaced with asterisks. Additionally, users can select which other users will be invited to the room and choose a room avatar by providing an image URL.'
     image={introduction}
@@ -57,5 +68,5 @@ import create from '../assets/images/create.png';
       https://github.com/alexcloudstar/ac-chat-app and you can also find more
       information about the app on the blog.alexcloudstar.com.`}
     image={awesome}
-  />
+  /> -->
 </Body>
