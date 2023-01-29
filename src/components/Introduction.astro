@@ -1,12 +1,11 @@
 ---
 import Body from '../layouts/Body.astro';
 import Card from './Card.astro';
-import introduction from '../assets/images/introduction.png';
-import punishment from '../assets/images/punishment.png';
-import awesome from '../assets/images/awesome.png';
-import create from '../assets/images/create.png';
 
 const benefits = await Astro.glob('../benefits/*.md');
+const ordered = benefits.sort(
+  (a, b) => a.frontmatter.order - b.frontmatter.order
+);
 ---
 
 <Body>
@@ -19,54 +18,4 @@ const benefits = await Astro.glob('../benefits/*.md');
       />
     ))
   }
-  <!-- <Card
-    title='Instant group Chats'
-    description='Introducing ChatApp V2: The Next Generation of Chatting ChatApp V2 is the upgraded version of KSChat, a chat application that offers a variety of features for users to enjoy. With ChatApp V2, users can easily create an account, log in and out, view their own and other users profiles, customize their own profiles, and create new chat rooms with customizations such as room name, profanity words, invited users, and room avatar. One of the key features of ChatApp V2 is the ability to customize chat rooms. Users can create new rooms with a custom room name and set profanity words that will automatically be replaced with asterisks. Additionally, users can select which other users will be invited to the room and choose a room avatar by providing an image URL.'
-    image={introduction}
-  />
-
-  <Card
-    title='Create new group chats'
-    description={`ChatApp V2 also offers users the ability to see other users statuses,
-  such as online or offline, which are indicated by a green or gray circle
-  under their profile picture. Users can also view a list of chat rooms,
-  which includes the room\'s image, title, creator, and the last message and
-  its sent time. When a new room is created, a default message of "Welcome
-  to the chatroom! ⚡️" is automatically sent. Another great feature of
-  ChatApp V2 is its real-time messaging capabilities. Users can send
-  messages by pressing enter or the send button, and they can also select
-  emojis from an emoji picker. Additionally, users can search for rooms and
-  edit existing rooms with the same customizations as when they were first
-  created.`}
-    image={create}
-  />
-
-  <Card
-    title='Punishments & We Believe in Technology'
-    description={` For those who may have been punished, ChatApp V2 has a punishment system
-      in place. Users will not be able to access chat rooms until their
-      punishment has expired. In terms of technology, ChatApp V2 utilizes
-      NestJS, PrismaJS, Passport, JWT, Socket.io, Docker, PostgreSQL, Prettier,
-      and ESLint on the backend, and ReactJS, Redux, Typescript, React Select,
-      React Router DOM, React Redux, React Hook Form, Emoji Picker React,
-      Swiper, Socket.io, Tailwind, Chromatic, Storybook, ESLint, StyleLint,
-      PostCSS, Husky, Prettier, Vite, and React Icons on the frontend. The
-      Frontend is hosted on vercel.com and Backend is hosted on aws.com In
-      addition to all of these features, ChatApp V2 also offers additional
-      functionality for admins. Admins have access to all of the features
-      mentioned above, as well as the ability to give ban/mute for a period of
-      time. 5, 10, 15, 30, 60, 120 minutes. Or 24 hours. Or permanent.`}
-    image={punishment}
-  />
-
-  <Card
-    title='Just Awesome 🤘🏻'
-    description={`ChatApp V2 is sure to revolutionize the way you chat with friends and
-      colleagues. With its user-friendly interface and advanced features, it's
-      the perfect choice for anyone looking for a new and improved chatting
-      experience. You can check the ChatApp V2 on the link
-      https://github.com/alexcloudstar/ac-chat-app and you can also find more
-      information about the app on the blog.alexcloudstar.com.`}
-    image={awesome}
-  /> -->
 </Body>
