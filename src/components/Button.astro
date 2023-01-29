@@ -8,7 +8,8 @@ const { isPrimary = false } = Astro.props as Props;
 
 <button
   type='button'
-  class={`${isPrimary ? 'primary' : 'secondary'} animate__backInLeft`}
+  class={`${isPrimary ? 'primary' : 'secondary'}`}
+  data-aos='zoom-in-right'
 >
   <a href='https://chatapp.alexcloudstar.com/'> Try it free</a>
 </button>

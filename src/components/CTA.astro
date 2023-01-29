@@ -1,15 +1,15 @@
 ---
 import Body from '../layouts/Body.astro';
-import image from '../assets/images/perfect_solution.png';
+import image from '/perfect_solution.png';
 import Button from './Button.astro';
 ---
 
 <Body>
   <div class='cta'>
-    <div class='cta--left'>
+    <div class='cta--left' data-aos='zoom-in'>
       <img src={image} alt='ChatApp perfect solution' />
     </div>
-    <div class='cta--right'>
+    <div class='cta--right' data-aos='fade-left'>
       <h2>Perfect Solution for Casual Chatting</h2>
       <Button isPrimary />
       <div class='underline'></div>
@@ -22,6 +22,7 @@ import Button from './Button.astro';
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 5rem 0;
   }
 
   .cta--left img {
