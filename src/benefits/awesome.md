@@ -8,4 +8,5 @@ description:
   https://github.com/alexcloudstar/ac-chat-app and you can also find more
   information about the app on the blog.alexcloudstar.com.
 image: /awesome.png
+order: 3
 ---
