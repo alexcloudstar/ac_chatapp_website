@@ -45,9 +45,22 @@ import Button from './Button.astro';
   }
 
   .underline {
+    display: none;
     width: 40%;
     height: 1px;
     background-color: var(--colorTertiary);
     margin-top: 5rem;
+  }
+
+  @media (max-width: 767px) {
+    .cta {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .underline {
+      display: block;
+    }
   }
 </style>

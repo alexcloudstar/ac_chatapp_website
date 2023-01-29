@@ -78,6 +78,16 @@ const { title = 'Chatapp' } = Astro.props as Props;
     background-color: inherit;
     background: inherit;
   }
+
+  @media(max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+
+    img {
+      max-width: 100% !important;
+    }
+  }
 </style>
 
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js" />
