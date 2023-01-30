@@ -24,7 +24,7 @@ const { isPrimary = false } = Astro.props as Props;
     font-weight: 500;
     font-family: var(--fontSecondary);
     cursor: pointer;
-    transition: all 0.45s ease;
+    transition: all 0.45s ease !important;
   }
 
   .primary {
@@ -32,15 +32,15 @@ const { isPrimary = false } = Astro.props as Props;
     color: #fff;
   }
 
+  .secondary {
+    background-color: #fff;
+    color: var(--colorSecondary);
+  }
+
   .primary:hover {
     background-color: #fff;
     color: var(--colorSecondary);
     border: 1px solid var(--colorSecondary);
-  }
-
-  .secondary {
-    background-color: #fff;
-    color: var(--colorSecondary);
   }
 
   .secondary:hover {
