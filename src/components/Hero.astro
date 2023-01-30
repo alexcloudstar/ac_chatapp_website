@@ -24,7 +24,7 @@ import Button from './Button.astro';
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 6rem;
+    padding: 3rem;
   }
 
   .hero--left {
@@ -41,7 +41,7 @@ import Button from './Button.astro';
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 600;
     white-space: break-spaces;
     letter-spacing: 0.2rem;
@@ -57,14 +57,48 @@ import Button from './Button.astro';
   }
 
   .hero--right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.5rem;
+    display: none;
   }
 
   .hero--right img {
     width: 100%;
     max-width: 37.5rem;
+  }
+
+  @media (max-width: 767px) {
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      padding: 6rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .hero--right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero {
+      padding: 6rem;
+    }
+
+    h2 {
+      font-size: 5rem;
+    }
+
+    .hero--right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1.5rem;
+    }
   }
 </style>

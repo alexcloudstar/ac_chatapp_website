@@ -29,13 +29,16 @@ import Logo from './Logo.astro';
   .contact {
     display: flex;
     justify-content: space-between;
-    align-items: centerr;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .contact h5 {
     font-family: var(--fontSecondary);
     font-size: 1.5rem;
     font-weight: 400;
+    margin: 0;
   }
 
   .contact a {
@@ -44,5 +47,20 @@ import Logo from './Logo.astro';
 
   .copyright {
     margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  @media (max-width: 1999px) {
+    .contact {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact h5 {
+      margin: 1rem 0 0.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
   }
 </style>

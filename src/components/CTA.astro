@@ -22,7 +22,6 @@ import Button from './Button.astro';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5rem 0;
   }
 
   .cta--left img {
@@ -35,12 +34,10 @@ import Button from './Button.astro';
   }
 
   .cta--right h2 {
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 1rem;
     color: var(--colorTertiary);
-    letter-spacing: 3.5px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-family: var(--fontPrimary);
   }
 
@@ -55,10 +52,29 @@ import Button from './Button.astro';
   @media (max-width: 767px) {
     .cta {
       flex-direction: column-reverse;
+      padding: 10px;
+    }
+
+    .cta--right {
+      margin: 20px;
+    }
+
+    img {
+      margin-top: 30px;
     }
   }
 
   @media (min-width: 1200px) {
+    .cta {
+      margin: 5rem 0;
+    }
+
+    .cta--right h2 {
+      font-size: 3.5rem;
+      letter-spacing: 3.5px;
+      margin-bottom: 3rem;
+    }
+
     .underline {
       display: block;
     }
