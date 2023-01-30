@@ -1,7 +1,7 @@
 ---
+import { SEOMetadata } from 'astro-seo-metadata';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SEOMetadata } from 'astro-seo-metadata';
 
 
 export interface Props {
@@ -42,6 +42,7 @@ const { title = 'Chatapp' } = Astro.props as Props;
     <title>{title}</title>
   </head>
   <body>
+
     <Header/>
     <main>
       <slot />
@@ -58,6 +59,8 @@ const { title = 'Chatapp' } = Astro.props as Props;
     --colorTertiary: #3B454D;
     --fontPrimary: 'Poppins', sans-serif;
     --fontSecondary: 'Roboto', sans-serif;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
 
@@ -72,6 +75,10 @@ const { title = 'Chatapp' } = Astro.props as Props;
     background-color: #f6f6f6;
   }
 
+  html,body {
+    overflow-x: hidden;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
@@ -80,16 +87,22 @@ const { title = 'Chatapp' } = Astro.props as Props;
   }
 
   img {
-      max-width: 100%;
+    max-width: 90%;
   }
+
 
   @media(max-width: 768px) {
     html {
       font-size: 14px;
     }
-
-
   }
+
+  @media(min-width: 1200px) {
+    img {
+    max-width: 50%;
+  }
+  }
+
 </style>
 
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js" />

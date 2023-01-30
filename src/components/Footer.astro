@@ -51,17 +51,16 @@ const year = new Date().getFullYear();
     text-align: center;
   }
 
-  @media (max-width: 1999px) {
-    .contact {
-      flex-direction: column;
-      text-align: center;
-    }
-
+  @media (max-width: 1099px) {
     .contact h5 {
       margin: 1rem 0 0.5rem;
     }
   }
 
   @media (min-width: 1200px) {
+    .contact {
+      flex-direction: row;
+      text-align: initial;
+    }
   }
 </style>

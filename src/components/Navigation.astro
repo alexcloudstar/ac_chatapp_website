@@ -1,0 +1,261 @@
+<header class='header' id='header'>
+  <nav class='navbar container'>
+    <a href='/' class='brand'>ChatApp</a>
+    <div class='menu' id='menu'>
+      <ul class='menu-inner'>
+        <li class='menu-item'><a href='#' class='menu-link'>Listing</a></li>
+        <li class='menu-item'><a href='#' class='menu-link'>Feature</a></li>
+        <li class='menu-item'><a href='#' class='menu-link'>Popular</a></li>
+        <li class='menu-item'><a href='#' class='menu-link'>Support</a></li>
+      </ul>
+    </div>
+    <div class='burger' id='burger'>
+      <span class='burger-line'></span>
+      <span class='burger-line'></span>
+      <span class='burger-line'></span>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .section {
+    margin: 0 auto;
+    padding: 5rem 0 1rem;
+  }
+
+  .container {
+    max-width: 80rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .centered {
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    text-transform: unset;
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-darken {
+    padding: 0.75rem 2rem;
+    color: #fff;
+    background-color: var(--color-black-200);
+    box-shadow: var(--shadow);
+  }
+  .btn-neutral {
+    padding: 0.75rem 2rem;
+    color: #fff;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: var(--colorPrimary);
+    box-shadow: var(--shadow);
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    align-content: center;
+    height: auto;
+  }
+  @media only screen and (min-width: 62rem) {
+    .navbar {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 100%;
+      height: 4.25rem;
+      padding-top: 0;
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 999px) {
+    .navbar {
+      padding: 20px;
+    }
+  }
+
+  .brand {
+    justify-self: start;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--colorSecondary);
+    font-family: var(--fontSecondary);
+    line-height: 1.25;
+    letter-spacing: -1px;
+  }
+
+  .menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-block: 3rem 2rem;
+    background: #fff;
+    box-shadow: var(--shadow);
+    transition: all 0.45s ease-in-out;
+  }
+  .menu.is-active {
+    top: 0;
+    width: 100%;
+    height: inherit;
+  }
+  .menu-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.25rem;
+    list-style-type: none;
+  }
+  .menu-link {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0.8rem;
+    box-shadow: inset 0 0 0 0 var(--colorSecondary);
+    padding: 0 0.25rem;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    transition: all 0.35s ease-in-out;
+  }
+  .menu-link:hover {
+    outline: none;
+    color: var(--color-red-400);
+  }
+  @media only screen and (min-width: 36rem) {
+    .menu {
+      position: relative;
+      justify-self: end;
+      top: 0;
+      left: inherit;
+      width: auto;
+      height: auto;
+      padding-block: 0;
+      background: none;
+      box-shadow: none;
+      transition: none;
+    }
+    .menu-inner {
+      display: flex;
+      flex-direction: row;
+      column-gap: 1.25rem;
+      margin: 0 auto;
+    }
+  }
+
+  .burger {
+    position: relative;
+    justify-self: end;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    width: 1.75rem;
+    height: 1rem;
+    border: none;
+    outline: none;
+    background: none;
+    visibility: visible;
+    transform: rotate(0deg);
+    transition: 0.35s ease;
+  }
+  @media only screen and (min-width: 36rem) {
+    .burger {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .burger-line {
+    position: absolute;
+    display: block;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    outline: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    background-color: #fff;
+    transition: 0.25s ease-in-out;
+  }
+  .burger-line:nth-child(1) {
+    top: 0px;
+  }
+  .burger-line:nth-child(2) {
+    top: 0.5rem;
+  }
+  .burger-line:nth-child(3) {
+    top: 1rem;
+  }
+  .burger.is-active .burger-line:nth-child(1) {
+    top: 0.5rem;
+    transform: rotate(135deg);
+  }
+  .burger.is-active .burger-line:nth-child(2) {
+    right: -1.5rem;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .burger.is-active .burger-line:nth-child(3) {
+    top: 0.5rem;
+    transform: rotate(-135deg);
+  }
+
+  .menu.is-active .menu-link {
+    color: var(--colorSecondary);
+  }
+
+  .burger.is-active .burger-line {
+    background-color: var(--colorSecondary);
+  }
+</style>
+
+<script>
+  const navbarMenu = document.getElementById('menu');
+  const burgerMenu = document.getElementById('burger');
+
+  // Open Close Navbar Menu on Click Burger
+  if (burgerMenu && navbarMenu) {
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('is-active');
+      navbarMenu.classList.toggle('is-active');
+    });
+  }
+
+  // Close Navbar Menu on Click Menu Links
+  document.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      burgerMenu?.classList.remove('is-active');
+      navbarMenu?.classList.remove('is-active');
+    });
+  });
+</script>
