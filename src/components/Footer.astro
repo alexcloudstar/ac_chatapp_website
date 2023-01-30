@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+const year = new Date().getFullYear();
 ---
 
 <footer>
@@ -14,7 +15,7 @@ import Logo from './Logo.astro';
       </div>
     </div>
     <div class='copyright'>
-      <span>© Alex Cloudstar 2022 - {new Date().getFullYear()}</span>
+      <span>© Alex Cloudstar 2023 {year === 2023 ? '' : `- ${year}`}</span>
     </div>
   </div>
 </footer>

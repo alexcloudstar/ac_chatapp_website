@@ -79,14 +79,16 @@ const { title = 'Chatapp' } = Astro.props as Props;
     background: inherit;
   }
 
+  img {
+      max-width: 100%;
+  }
+
   @media(max-width: 768px) {
     html {
       font-size: 14px;
     }
 
-    img {
-      max-width: 100% !important;
-    }
+
   }
 </style>
 

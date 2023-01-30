@@ -24,10 +24,6 @@ import Button from './Button.astro';
     align-items: center;
   }
 
-  .cta--left img {
-    max-width: 650px;
-  }
-
   .cta--right {
     max-width: 500px;
     margin-right: 10rem;
@@ -67,6 +63,10 @@ import Button from './Button.astro';
   @media (min-width: 1200px) {
     .cta {
       margin: 5rem 0;
+    }
+
+    .cta--left img {
+      max-width: 650px;
     }
 
     .cta--right h2 {
