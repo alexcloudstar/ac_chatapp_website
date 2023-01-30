@@ -1,7 +1,7 @@
 ---
+import { SEOMetadata } from 'astro-seo-metadata';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SEOMetadata } from 'astro-seo-metadata';
 
 
 export interface Props {
@@ -29,7 +29,7 @@ const { title = 'Chatapp' } = Astro.props as Props;
     siteName={'AC ChatApp'}
     description={'Introducing ChatApp V2: The Next Generation of Chatting ChatApp V2 is the upgraded version of KSChat, a chat application that offers a variety of features for users to enjoy. With ChatApp V2, users can easily create an account, log in and out, view their own and other users profiles.'}
     image={'http://example.com/the_image_url-preferably_absolute.jpg'}
-    favicon={'/favicon.svg'}
+    favicon={'/favicon.png'}
     author="Alex Cloudstar"
     copyright="MIT>"
     astroSitemap={true}
@@ -58,6 +58,8 @@ const { title = 'Chatapp' } = Astro.props as Props;
     --colorTertiary: #3B454D;
     --fontPrimary: 'Poppins', sans-serif;
     --fontSecondary: 'Roboto', sans-serif;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
 
@@ -72,12 +74,34 @@ const { title = 'Chatapp' } = Astro.props as Props;
     background-color: #f6f6f6;
   }
 
+  html,body {
+    overflow-x: hidden;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
     background-color: inherit;
     background: inherit;
   }
+
+  img {
+    max-width: 90%;
+  }
+
+
+  @media(max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    img {
+    max-width: 50%;
+  }
+  }
+
 </style>
 
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js" />
