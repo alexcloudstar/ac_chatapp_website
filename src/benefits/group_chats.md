@@ -12,6 +12,6 @@ description:
   emojis from an emoji picker. Additionally, users can search for rooms and
   edit existing rooms with the same customizations as when they were first
   created.
-image: /create.png
+image: /create.webp
 order: 1
 ---
