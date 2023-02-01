@@ -7,6 +7,6 @@ description:
   experience. You can check the ChatApp V2 on the link
   https://github.com/alexcloudstar/ac-chat-app and you can also find more
   information about the app on the blog.alexcloudstar.com.
-image: /awesome.png
+image: /awesome.webp
 order: 3
 ---

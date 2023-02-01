@@ -14,6 +14,6 @@ description:
   functionality for admins. Admins have access to all of the features
   mentioned above, as well as the ability to give ban/mute for a period of
   time. 5, 10, 15, 30, 60, 120 minutes. Or 24 hours. Or permanent.
-image: /punishment.png
+image: /punishment.webp
 order: 2
 ---
